@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet Valore - Marketing Digitale e Lead Generation</title>
+    <!-- Initialize dataLayer -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    </script>
+    <!-- Iubenda Cookie Solution -->
+    <script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        askConsentAtCookiePolicyUpdate: true,
+        enableTcf: false,
+        cookiePolicyId: 77132692,
+        siteId: 2657249,
+        lang: 'it',
+        banner: {
+          position: 'bottom',
+          acceptButtonDisplay: true,
+          customizeButtonDisplay: true,
+          rejectButtonDisplay: true
+        },
+        callback: {
+          onPreferenceFirstExpressed: function(preference) {
+            if (preference.consent === true) {
+              // Initialize GTM only after initial consent is given
+              var gtmScript = document.createElement('script');
+              gtmScript.async = true;
+              gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TTHM5L';
+              document.head.appendChild(gtmScript);
+
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+              });
+
+              // Add noscript iframe after consent
+              var noscriptIframe = document.createElement('noscript');
+              var iframe = document.createElement('iframe');
+              iframe.src = 'https://www.googletagmanager.com/ns.html?id=GTM-TTHM5L';
+              iframe.height = '0';
+              iframe.width = '0';
+              iframe.style.display = 'none';
+              iframe.style.visibility = 'hidden';
+              noscriptIframe.appendChild(iframe);
+              document.body.insertBefore(noscriptIframe, document.body.firstChild);
+            }
+          }
+        }
+      };
+    </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <meta name="google-site-verification" content="8aigR7kW7bsvC18EzE2iY5P3XoJM_mtIhSxixKcCLqw" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

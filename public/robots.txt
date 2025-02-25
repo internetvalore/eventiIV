@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /
+Allow: /sitemap.xml
+Allow: /$
+Allow: /services$
+Allow: /services/lead-generation$
+Allow: /services/ecommerce$
+Allow: /services/ads$
+Allow: /services/analytics$
+Allow: /instant-websites$
+Allow: /flipping-catalog$
+Allow: /specializations$
+Allow: /about$
+
+Sitemap: https://internetvalore.com/sitemap.xml
